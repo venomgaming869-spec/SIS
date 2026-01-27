@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Innovator Society | HRIT University</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="brand">
+            <img src="/images/hrit.png" alt="">
+            <img src="/images/SIS.png">
+            <h2>SIS HRIT</h2>
+        </div>
+        <div>
+            <button onclick="toggleMode()"><i class="fa-solid fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Student Innovator Society</h1>
+        <p class="center">Official Technical Society of BCA & MCA Students</p>
+        <p class="center"><b>HRIT University</b></p>
+        <img src="/images/hrit_back.png" alt="HRIT Campus">
+    </section>
+
+
+    <!-- ABOUT -->
+    <section>
+        <h2>About SIS</h2>
+        <div class="about-box">
+            <p>
+                Student Innovator Society (SIS) is a student-driven technical community at
+                HRIT University focused on innovation, real-world problem solving,
+                leadership development and hands-on technical learning.
+                <br><br>
+                We organize workshops, hackathons, bootcamps, industry sessions and
+                collaborative projects to bridge the gap between academics and industry.
+            </p>
+        </div>
+    </section>
+    <!-- EVENTS -->
+    <section>
+        <h2>Upcoming Events</h2>
+        <div class="grid" id="events"></div>
+    </section>
+ 
+    <!-- FOUNDERS -->
+    <section>
+        <h2>Leadership</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="/members/mukul.jpg" alt="mukul img">
+                <h3>Mukul</h3>
+                <div class="role">Organizer</div>
+                <div class="overlay">Vision & strategic leadership</div>
+            </div>
+            <div class="card">
+                <img src="/members/nikhil.jpg" alt="nikhil img">
+                <h3>Nikhil</h3>
+                <div class="role">Organizer</div>
+                <div class="overlay">Operations & growth strategy</div>
+            </div>
+        </div>
+    </section>
+    <!-- CORE TEAM -->
+
+    <h2>Our Team</h2>
+    <p class="quote">Meet The Brains Behind The Mission</p>
+    <div class="team-container">
+    </div>
+
+
+    <!-- CONTACT -->
+    <section class="contact-bg">
+        <!-- left side -->
+        <div class="left-side">
+            <h2>Get in Touch</h2>
+            <hr>
+            <p>Have questions or want to collaborate? Reach out to us!</p>
+            <div class="info-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="info-text">
+                    <h5>Address</h5>
+                    <p>HRIT University 8th KM Stone, Meerut Road, Near Duhai Rapid Rail Station, Ghaziabad, U.P</p>
+                </div>
+            </div>
+            <div class="info-box">
+                <i class="fa-solid fa-envelope"></i>
+                <div class="info-text">
+                    <h5>Email</h5>
+                    <p>sis.officialsteam@gmail.com</p>
+                </div>
+            </div>
+            <div class="info-box">
+                <i class="fa-solid fa-phone"></i>
+                <div class="info-text">
+                    <h5>Phone</h5>
+                    <p>+91 7065467371</p>
+                    <p>+91 9068685074</p>
+
+                </div>
+            </div>
+        </div>
+        <!-- right side -->
+        <div class="right-side">
+            <h2>Contact Form</h2>
+            <hr>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="f9c7f21a-4985-4430-bbf0-1b71a729f245">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="text" id="phone" name="phone" placeholder="Your Phone Number">
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="Btn">Send Message</button>
+            </form>
+            <!-- Divider -->
+            <div class="divider">
+                <span></span>
+                <p>OR</p>
+                <span></span>
+            </div>
+            <!-- Alternative Contact Method -->
+            <button type="submit" class="FormBtn Btn">Fill Google Form</button>
+
+        </div>
+        </div>
+    </section>
+    <div class="social-media">
+        <a href="https://www.instagram.com/sis.techsociety?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                class="fa-brands fa-instagram"></i></a>
+        <a
+            href="https://www.linkedin.com/company/student-innovators-society/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnQzzqh8_tH-n41h9ipxCaiSCKxGjUr5A-FSt95PR4vrkZQfCByEpwdvy5hDA_aem_Ca4Qf4McYJzXz0B2qDiwaQ"><i
+                class="fa-brands fa-linkedin"></i></a>
+        <a href="https://chat.whatsapp.com/HpePIfnFEVjKctUJ5C4bEh"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <img src="/images/SIS.png">
+        <img src="/images/hrit.png">
+        <p>© 2026 Student Innovator Society · HRIT University</p>
+    </footer>
+    <script src="sis.js"></script>
+</body>
+
+</html>
