@@ -1,8 +1,19 @@
 const events = [
-  { t: "TechNova Hackathon", d: "13 March 2026", v: "Campus", a: "Register" },
-  { t: "UI UX Workshop", d: "15 Feb 2026", v: "HRIT", a: "Coming Soon" },
-  { t: "Web Bootcamp", d: "25 Jan 2026", v: "Online", a: "Coming Soon" },
-  { t: "Tech Talk", d: "20 Feb 2026", v: "Auditorium", a: "Coming Soon" },
+  {
+    t: "TechNova Hackathon",
+    d: "13 March 2026",
+    v: "Campus",
+    a: "Register",
+    link: "https://github.com/venomgaming869-spec",
+  },
+  {
+    t: "UI UX Workshop",
+    d: "1 Feb 2026",
+    v: "HRIT",
+    a: "Coming Soon",
+  },
+  { t: "UI UX Workshop", d: "50 Feb 2026", v: "HRIT", a: "bfdobc" },
+  { t: "teckkkk", d: "4 Feb 2026", v: "HRIT", a: "ane wala" },
 ];
 const e = document.getElementById("events");
 events.forEach((x) => {
@@ -11,26 +22,18 @@ events.forEach((x) => {
    <h3>${x.t}</h3>
    <p>${x.d}</p>
    <p>${x.v}</p>
-  <button type="submit" class="event-btn">${x.a}</button>
-
-    </div>`;
+   <a href=${x.link} class="event-btn">${x.a}</a>
+   </div>`;
 });
-
-//  <a class="event-btn">Register</a>
 
 function toggleMode() {
   document.body.classList.toggle("dark");
   document.getElementById("navbar").classList.toggle("dark");
 }
 
-// Google Form Submission
+// Google Form Submission FOR CONTACT US
 document.querySelector(".FormBtn").addEventListener("click", function () {
   window.open("https://forms.gle/rCZizbatrZexw7ij9", "_blank");
-});
-
-// Google Form Submission FOR HACKATHON
-document.querySelector(".event-btn").addEventListener("click", function () {
-  window.open("", "_blank");
 });
 
 //TEAM DATA IN FORM OF ARRAY OF OBJECTS
