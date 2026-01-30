@@ -4,7 +4,6 @@ const events = [
     d: "13 March 2026",
     v: "Campus",
     a: "Register",
-    link: "https://github.com/venomgaming869-spec",
   },
   {
     t: "UI UX Workshop",
