@@ -1,16 +1,17 @@
 const events = [
   {
-    t: "UI UX Workshop",
+    t: "UI UX Online Session",
     d: "5 Feb 2026",
     v: "Online",
-    a: "Zoom Link Will Be Provided On SIS Whatsapp Group",
+    a: "Register",
+    link: "https://meet.google.com/vaf-cowx-mym",
   },
   {
     t: "Tech Event",
     d: "Upcoming",
     v: "Campus",
-    a: "Register",
-  }
+    a: "Coming Soon",
+  },
 ];
 const e = document.getElementById("events");
 events.forEach((x) => {
@@ -67,11 +68,6 @@ const teammembers = [
     img: "/members/lakshay.jpg",
   },
   {
-    name: "Kashish Nagar",
-    role: "Social Media Lead",
-    img: "/members/kashish.jpeg",
-  },
-  {
     name: "Nikhil Bindal",
     role: "Organizer",
     img: "/members/nikhil.jpg",
@@ -80,6 +76,11 @@ const teammembers = [
     name: "Ishika Sharma",
     role: "Technical Lead",
     img: "/members/ishika.jpg",
+  },
+  {
+    name: "Kashish Nagar",
+    role: "Social Media Lead",
+    img: "/members/kashish.jpeg",
   },
   {
     name: "Vandana",
