@@ -3,7 +3,7 @@ const events = [
     t: "UI UX Online Session",
     d: "5 Feb 2026",
     v: "Online",
-    a: "Register",
+    a: "Join Now",
     link: "https://meet.google.com/vaf-cowx-mym",
   },
   {
