@@ -1,18 +1,16 @@
 const events = [
   {
-    t: "TechNova Hackathon",
-    d: "13 March 2026",
-    v: "Campus",
-    a: "Register",
+    t: "UI UX Workshop",
+    d: "5 Feb 2026",
+    v: "Online",
+    a: "Zoom Link Will Be Provided On SIS Whatsapp Group",
   },
   {
-    t: "UI UX Workshop",
-    d: "1 Feb 2026",
-    v: "HRIT",
-    a: "Coming Soon",
-  },
-  { t: "UI UX Workshop", d: "50 Feb 2026", v: "HRIT", a: "bfdobc" },
-  { t: "teckkkk", d: "4 Feb 2026", v: "HRIT", a: "ane wala" },
+    t: "Tech Event",
+    d: "Upcoming",
+    v: "Campus",
+    a: "Register",
+  }
 ];
 const e = document.getElementById("events");
 events.forEach((x) => {
