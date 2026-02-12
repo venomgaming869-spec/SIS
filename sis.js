@@ -2,7 +2,7 @@ const events = [
   {
     t: "TechNova Hackathon",
     d: "14 March 2026",
-    v: "Campus",
+    v: "On HRIT Campus",
     a: "Register",
     link: "https://unstop.com/hackathons/technova-2026-hrit-university-1638112",
   },
@@ -18,12 +18,12 @@ const events = [
 
 const flagshipEventsData = [
   {
-    title: "UI UX ONLINE SESSION",
+    title: "UI/UX SESSION",
     date: "February 5 2026",
     speakers: "Tushar Bhati",
-    attendees: "150+",
+    attendees: "100+",
     about:
-      "This interactive UI/UX Online Workshop helped students dive into the world of design, where creativity meets functionality. From understanding user behavior to crafting seamless interfaces, attendees gained practical insights into designing meaningful digital products.",
+      "This interactive UI/UX Workshop helped students dive into the world of design, where creativity meets functionality. From understanding user behavior to crafting seamless interfaces, attendees gained practical insights into designing meaningful digital products.",
     poster: "/Event/ui-ux.png",
   },
 ];
@@ -150,11 +150,6 @@ const teammembers = [
     name: "Vandana",
     role: "UX Designer",
     img: "/members/vandana.jpg",
-  },
-  {
-    name: "Manokamana",
-    role: "UX Designer",
-    img: "/members/manokamana.jpg",
   },
   {
     name: "Naveen",

@@ -62,7 +62,7 @@
         .brand h2 {
             margin: 0;
             margin-left: 8px;
-            color: var(--primary);
+            color: var(--text);
         }
 
         nav button {
