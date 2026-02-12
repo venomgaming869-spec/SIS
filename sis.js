@@ -1,18 +1,82 @@
 const events = [
   {
-    t: "UI UX Online Session",
-    d: "5 Feb 2026",
-    v: "Online",
-    a: "Join Now",
-    link: "https://meet.google.com/vaf-cowx-mym",
+    t: "TechNova Hackathon",
+    d: "14 March 2026",
+    v: "Campus",
+    a: "Register",
+    link: "https://unstop.com/hackathons/technova-2026-hrit-university-1638112",
   },
   {
-    t: "Tech Event",
+    t: "Workhop",
     d: "Upcoming",
     v: "Campus",
-    a: "Coming Soon",
+    a: "coming soon",
   },
 ];
+
+// Flagship Events (completed)
+
+const flagshipEventsData = [
+  {
+    title: "UI UX ONLINE SESSION",
+    date: "February 5 2026",
+    speakers: "Tushar Bhati",
+    attendees: "150+",
+    about:
+      "This interactive UI/UX Online Workshop helped students dive into the world of design, where creativity meets functionality. From understanding user behavior to crafting seamless interfaces, attendees gained practical insights into designing meaningful digital products.",
+    poster: "/Event/ui-ux.png",
+  },
+];
+
+const container = document.getElementById("events-container");
+
+function createInfoBox(label, value) {
+  return `
+    <div class="event-info-box">
+      <strong>${label}</strong>
+      ${value}
+    </div>
+  `;
+}
+
+function createEventCard(event) {
+  return `
+    <div class="event-card">
+      <div class="poster">
+        <img src="${event.poster}" alt="${event.title}">
+      </div>
+
+      <div class="event-content">
+        <div class="event-title">${event.title}</div>
+
+        <div class="info-row">
+          ${createInfoBox("Date ", event.date)}
+          ${createInfoBox("Speakers ", event.speakers)}
+          ${createInfoBox("Attendees ", event.attendees)}
+        </div>
+
+        <div class="about">${event.about}</div>
+
+        <a href="#" class="view-link">View Event Gallery →</a>
+      </div>
+    </div>
+  `;
+}
+
+function renderEvents() {
+  const fragment = document.createDocumentFragment();
+
+  flagshipEventsData.forEach((evt) => {
+    const wrapper = document.createElement("div");
+    wrapper.innerHTML = createEventCard(evt);
+    fragment.appendChild(wrapper.firstElementChild);
+  });
+
+  container.appendChild(fragment);
+}
+
+renderEvents();
+
 const e = document.getElementById("events");
 events.forEach((x) => {
   e.innerHTML += `
