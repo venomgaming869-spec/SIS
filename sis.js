@@ -13,6 +13,16 @@ const events = [
     a: "coming soon",
   },
 ];
+const e = document.getElementById("events");
+events.forEach((x) => {
+  e.innerHTML += `
+ <div class="card">
+   <h3>${x.t}</h3>
+   <p>${x.d}</p>
+   <p>${x.v}</p>
+   <a href=${x.link} class="event-btn">${x.a}</a>
+   </div>`;
+});
 
 // Flagship Events (completed)
 
@@ -77,15 +87,12 @@ function renderEvents() {
 
 renderEvents();
 
-const e = document.getElementById("events");
-events.forEach((x) => {
-  e.innerHTML += `
- <div class="card">
-   <h3>${x.t}</h3>
-   <p>${x.d}</p>
-   <p>${x.v}</p>
-   <a href=${x.link} class="event-btn">${x.a}</a>
-   </div>`;
+// nav function
+let menu = document.querySelector(".menu");
+let ul = document.querySelector(".ul-nav");
+menu.addEventListener("click", () => {
+  menu.classList.toggle("fa-bars-staggered");
+  ul.classList.toggle("active");
 });
 
 function toggleMode() {
@@ -105,16 +112,45 @@ const teammembers = [
     name: "Mukul Yadav",
     role: "Organizer",
     img: "/members/mukul.jpg",
+    linkdin: "https://www.linkedin.com/in/mukul-yadav-b77bbb340/",
+  },
+  {
+    name: "Nikhil Bindal",
+    role: "Organizer",
+    img: "/members/nikhil.jpg",
+    linkdin: "https://www.linkedin.com/in/nikhil-bindal-185403339/",
   },
   {
     name: "Farhan Akhtar",
     role: "Technical Lead",
     img: "members/farhan.jpg",
+    linkdin: "https://www.linkedin.com/in/farhan-akhtar3423/",
   },
   {
-    name: "Sania Shamshad",
-    role: "PR & Outreach Lead",
-    img: "/members/sania.jpg",
+    name: "Ishika Sharma",
+    role: "Technical Lead",
+    img: "/members/ishika.jpg",
+    linkdin: "https://www.linkedin.com/in/ishika-sharma-9228b6328/",
+  },
+  {
+    name: "Naveen",
+    role: "Videography Lead",
+    img: "/members/naveen.jpg",
+  },
+  {
+    name: "Shital Jaiswar",
+    role: "Videography Lead",
+    img: "/members/shital.jpeg",
+  },
+  {
+    name: "Kashish Nagar",
+    role: "Social Media Lead",
+    img: "/members/kashish.jpeg",
+  },
+  {
+    name: "Vandana",
+    role: "UX Designer",
+    img: "/members/vandana.jpg",
   },
   {
     name: "Shivam Pathak",
@@ -131,36 +167,6 @@ const teammembers = [
     role: "CO-Management Lead",
     img: "/members/lakshay.jpg",
   },
-  {
-    name: "Nikhil Bindal",
-    role: "Organizer",
-    img: "/members/nikhil.jpg",
-  },
-  {
-    name: "Ishika Sharma",
-    role: "Technical Lead",
-    img: "/members/ishika.jpg",
-  },
-  {
-    name: "Kashish Nagar",
-    role: "Social Media Lead",
-    img: "/members/kashish.jpeg",
-  },
-  {
-    name: "Vandana",
-    role: "UX Designer",
-    img: "/members/vandana.jpg",
-  },
-  {
-    name: "Naveen",
-    role: "Videography Lead",
-    img: "/members/naveen.jpg",
-  },
-  {
-    name: "Shital Jaiswar",
-    role: "Videography Lead",
-    img: "/members/shital.jpeg",
-  },
 ];
 
 //FNC TO SHOW TEAM MEMBERS & THERE DETAILS
@@ -168,7 +174,7 @@ const teammembers = [
 function showTeamMembers() {
   let container = document.querySelector(".team-container");
   teammembers.forEach((members) => {
-    let contentParent = document.createElement("div");
+    let parentDiv = document.createElement("div");
     let img = document.createElement("img");
     let name = document.createElement("h2");
     let role = document.createElement("p");
@@ -177,14 +183,29 @@ function showTeamMembers() {
     name.textContent = members.name;
     role.textContent = members.role;
 
-    container.appendChild(contentParent);
-    contentParent.appendChild(img);
-    contentParent.appendChild(name);
-    contentParent.appendChild(role);
+    let linkdin;
+    let anchor;
+    if (members.linkdin) {
+      linkdin = document.createElement("i");
+      anchor = document.createElement("a");
 
-    contentParent.classList.add("boxes");
-    name.classList.add("overlay2");
-    role.classList.add("overlay2", "overlay3");
+      anchor.href = members.linkdin;
+      anchor.target = "_blank";
+
+      linkdin.classList.add("fa-brands", "fa-linkedin");
+
+      anchor.appendChild(linkdin);
+      parentDiv.appendChild(anchor);
+    }
+    parentDiv.appendChild(img);
+    parentDiv.appendChild(name);
+    parentDiv.appendChild(role);
+    container.appendChild(parentDiv);
+
+    parentDiv.classList.add("boxes");
+    img.classList.add("perImg");
+    name.classList.add("name-role-text");
+    role.classList.add("name-role-text");
   });
 }
 

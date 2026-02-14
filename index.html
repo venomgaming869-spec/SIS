@@ -14,18 +14,25 @@
 <body>
 
     <!-- NAV -->
-    <nav id="navbar">
+    <nav id="navbar" class="glass-card">
         <div class="brand">
             <img src="/images/SIS.png">
             <h2>SIS-HRIT</h2>
-        </div>
-        <div>
-            <button onclick="toggleMode()"><i class="fa-solid fa-moon"></i></button>
+            <ul class="ul-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#flagship-events">Flagship Events</a></li>
+                <li><a href="#upcoming-events">Upcoming Events</a></li>
+                <li><a href="#our-team">Our Teams</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <button onclick="toggleMode()"><i class="fa-solid fa-moon"></i></button>
+            </ul>
+            <i class="fa-solid fa-xmark fa-bars-staggered menu" id="menu"></i>
         </div>
     </nav>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="home">
         <h1>Student Innovator Society</h1>
         <p class="center">A University-Wide Community for Technology & Innovation</p>
         <p class="center"><b>HRIT University</b></p>
@@ -34,7 +41,7 @@
 
 
     <!-- ABOUT -->
-    <section>
+    <section id="about">
         <h2>About SIS</h2>
         <div class="about-box">
             <p>
@@ -49,38 +56,39 @@
     </section>
 
     <!-- Flagship Events (completed) -->
-      <section id="flagship-events" class="section">
-    <div class="section-header">
-      <span class="badge">Past Highlights</span>
-      <h1>Flagship Events</h1>
-      <p>Highlighting our most impactful milestones and the innovation that defined them.</p>
-    </div>
+    <section id="flagship-events" class="section">
+        <div class="section-header">
+            <span class="badge">Past Highlights</span>
+            <h1>Flagship Events</h1>
+            <p>Highlighting our most impactful milestones and the innovation that defined them.</p>
+        </div>
 
-    <div id="events-container" class="events-container">
-      <!-- Cards injected via JS -->
-    </div>
+        <div id="events-container" class="events-container">
+            <!-- Cards injected via JS -->
+        </div>
 
-    <div class="cta">
-      <p>Want to be part of the next big thing?</p>
-     <a class="Join-btn" href="https://chat.whatsapp.com/HpePIfnFEVjKctUJ5C4bEh?mode=gi_t">Join Student Innovator Society</a>
-    </div>
-  </section>
+        <div class="cta">
+            <p>Want to be part of the next big thing?</p>
+            <a class="Join-btn" href="https://chat.whatsapp.com/HpePIfnFEVjKctUJ5C4bEh?mode=gi_t">Join Student Innovator
+                Society</a>
+        </div>
+    </section>
 
     <!-- EVENTS -->
-    <section>
+    <section id="upcoming-events">
         <h2>Upcoming Events</h2>
         <div class="grid" id="events"></div>
     </section>
- 
+
     <!-- CORE TEAM -->
 
-    <h2>Our Team</h2>
+    <h2 id="our-team">Our Team</h2>
     <p class="quote">Meet The Brains Behind The Mission</p>
     <div class="team-container">
     </div>
 
     <!-- CONTACT -->
-    <section class="contact-bg">
+    <section class="contact-bg" id="contact">
         <!-- left side -->
         <div class="left-side">
             <h2>Get in Touch</h2>
@@ -129,7 +137,7 @@
                 <span></span>
             </div>
             <!-- Alternative Contact Method -->
-            <button type="submit" class="FormBtn Btn">Fill Google Form</button>
+            <button type="submit" class="FormBtn Btn">Get Call</button>
 
         </div>
         </div>
